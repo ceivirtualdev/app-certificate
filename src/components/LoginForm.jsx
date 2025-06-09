@@ -108,12 +108,12 @@ const LoginForm = () => {
           </form>
           <div className="mt-6 p-4 bg-blue-50 rounded-lg border border-blue-200">
             <p className="text-xs text-blue-700 text-center">
-              <strong>Credenciales de prueba:</strong><br />
-              Email: admin@example.com (o el email de tu admin en Supabase)<br/>
-              Contraseña: la contraseña que estableciste para ese admin.
+              <strong>Todos los derechos reservados - 2025</strong><br />
+              Desarrollado con amor en Medellín/Colombia por <a href='https://wa.me/573208048128'>Lenipseart Developer</a><br/>
+              Para CEI VIRTUAL - UNILATINA
             </p>
              <p className="text-xs text-blue-700 text-center mt-2">
-              Nota: El usuario 'admin' por defecto con contraseña 'admin123' (hash: 8c69...) fue insertado en la tabla 'admins' de Supabase, pero Supabase Auth usa su propia tabla 'auth.users'. Debes crear un usuario a través de Supabase Auth (ej. en el dashboard de Supabase) o implementar una función de registro.
+              Conectando educación virtual de calidad
             </p>
           </div>
         </CardContent>
