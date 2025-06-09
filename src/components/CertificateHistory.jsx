@@ -81,10 +81,10 @@ const CertificateHistory = () => {
             </div>
             <div>
               <CardTitle className="text-2xl font-bold text-gray-900 montserrat">
-                Historial de Certificados
+                Historial de Constancias
               </CardTitle>
               <CardDescription>
-                Consulta y descarga certificados emitidos
+                Consulta y descarga constancias emitidas
               </CardDescription>
             </div>
           </div>
@@ -103,7 +103,7 @@ const CertificateHistory = () => {
             </div>
             
             <div className="text-sm text-gray-600">
-              Mostrando {filteredCertificates.length} de {certificates.length} certificados
+              Mostrando {filteredCertificates.length} de {certificates.length} constancias
             </div>
           </div>
         </CardContent>
@@ -118,8 +118,8 @@ const CertificateHistory = () => {
             </h3>
             <p className="text-gray-600">
               {certificates.length === 0 
-                ? 'Aún no se han generado certificados'
-                : 'No se encontraron certificados que coincidan con tu búsqueda'
+                ? 'Aún no se han generado constancias'
+                : 'No se encontraron constancias que coincidan con tu búsqueda'
               }
             </p>
           </CardContent>
