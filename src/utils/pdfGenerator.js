@@ -12,8 +12,8 @@ export const generateCertificatePDF = async (certificateData, appConfig) => {
   const pageHeight = pdf.internal.pageSize.getHeight();
 
   const config = {
-    institutionName: appConfig.institution_name || 'Instituto de Educación Superior',
-    logoUrl: appConfig.logo_url || '',
+    institutionName: appConfig.institution_name || 'CEI VIRTUAL | UNILATINA - Universidad Latina',
+    logoUrl: appConfig.logo_url || 'https://img.ceivirtual.co/app/logo-alianza-full.png',
     signatureUrl: appConfig.signature_url || '',
     primaryColor: appConfig.primary_color || '#003366',
   };
