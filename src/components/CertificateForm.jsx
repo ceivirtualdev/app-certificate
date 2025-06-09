@@ -185,10 +185,10 @@ const CertificateForm = () => {
           </div>
           <div>
             <CardTitle className="text-2xl font-bold text-gray-900 montserrat">
-              Generar Certificado
+              Generar Constancia
             </CardTitle>
             <CardDescription>
-              Completa la información del estudiante para generar el certificado
+              Completa la información del estudiante para generar la constancia
             </CardDescription>
           </div>
         </div>

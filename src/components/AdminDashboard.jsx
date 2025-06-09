@@ -12,15 +12,18 @@ const AdminDashboard = ({ user, onLogout }) => {
   const [activeTab, setActiveTab] = useState('generate');
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
-      {/* Header */}
-      <div className="bg-white/80 backdrop-blur-sm border-b border-gray-200 sticky top-0 z-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <Award className="w-6 h-6 text-white" />
-              </div>
+    <div className="bg-white/80 backdrop-blur-sm border-b border-gray-200 sticky top-0 z-10">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="flex justify-between items-center h-16">
+      <div className="flex items-center gap-3">
+        <div className="w-20 h-20 flex items-center justify-center">
+          <img
+            src="https://img.ceivirtual.co/app/logo-milan.png"
+            alt="Logo Sistema Milan"
+            className="w-20 h-20 object-contain"
+          />
+        </div>
+        <div>
               <div>
                 <h1 className="text-xl font-bold text-gray-900 montserrat">
                   Panel Administrativo
@@ -48,7 +51,7 @@ const AdminDashboard = ({ user, onLogout }) => {
           <TabsList className="grid w-full grid-cols-3 lg:w-auto lg:grid-cols-3 bg-white/80 backdrop-blur-sm">
             <TabsTrigger value="generate" className="flex items-center gap-2">
               <Award className="w-4 h-4" />
-              <span className="hidden sm:inline">Generar Certificado</span>
+              <span className="hidden sm:inline">Generar Constancia</span>
               <span className="sm:hidden">Generar</span>
             </TabsTrigger>
             <TabsTrigger value="courses" className="flex items-center gap-2">
@@ -66,10 +69,10 @@ const AdminDashboard = ({ user, onLogout }) => {
           <TabsContent value="generate" className="space-y-6">
             <div className="text-center mb-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-4 montserrat">
-                Generar Nuevo Certificado
+                Generar Nueva Constancia
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Completa la información del estudiante para generar y enviar su certificado académico
+                Completa la información del estudiante para generar y enviar su constancia académica
               </p>
             </div>
             <CertificateForm />
@@ -81,7 +84,7 @@ const AdminDashboard = ({ user, onLogout }) => {
                 Gestión de Cursos
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Administra los cursos y diplomados disponibles para los certificados
+                Administra los cursos y diplomados disponibles para las constancias
               </p>
             </div>
             <CourseManager />
@@ -90,10 +93,10 @@ const AdminDashboard = ({ user, onLogout }) => {
           <TabsContent value="history" className="space-y-6">
             <div className="text-center mb-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-4 montserrat">
-                Historial de Certificados
+                Historial de Constancias
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Consulta, busca y descarga certificados emitidos anteriormente
+                Consulta, busca y descarga constancias emitidas anteriormente
               </p>
             </div>
             <CertificateHistory />

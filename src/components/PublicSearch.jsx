@@ -46,12 +46,12 @@ const PublicSearch = () => {
       if (foundCertificates.length === 0) {
         toast({
           title: "Sin resultados",
-          description: "No se encontraron certificados para esta identificación"
+          description: "No se encontraron constancias para esta identificación"
         });
       } else {
         toast({
-          title: "¡Certificados encontrados!",
-          description: `Se encontraron ${foundCertificates.length} certificado(s)`
+          title: "¡Constancias encontrados!",
+          description: `Se encontraron ${foundCertificates.length} constancia(s)`
         });
       }
     } catch (error) {
@@ -85,7 +85,7 @@ const PublicSearch = () => {
       
       toast({
         title: "¡Descarga exitosa!",
-        description: "El certificado se ha descargado correctamente"
+        description: "La constancia se ha descargado correctamente"
       });
     } catch (error) {
       toast({
@@ -104,17 +104,17 @@ const PublicSearch = () => {
             <Search className="w-10 h-10 text-white" />
           </div>
           <h1 className="text-4xl font-bold text-gray-900 mb-4 montserrat">
-            Consulta de Certificados
+            Consulta de Constancias
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Ingresa tu número de identificación para consultar tus certificados académicos
+            Ingresa tu número de identificación para consultar tus constancias académicas
           </p>
         </div>
 
         <Card className="mb-8 shadow-xl border-0 bg-white/80 backdrop-blur-sm">
           <CardHeader>
             <CardTitle className="text-xl font-semibold text-gray-900 montserrat">
-              Buscar Certificados
+              Buscar Constancias
             </CardTitle>
             <CardDescription>
               Utiliza tu número de cédula, pasaporte o documento de identidad
@@ -152,7 +152,7 @@ const PublicSearch = () => {
         {certificates.length > 0 && (
           <div className="space-y-4">
             <h2 className="text-2xl font-bold text-gray-900 mb-4 montserrat">
-              Certificados Encontrados
+              Constancias Encontradas
             </h2>
             {certificates.map((certificate, index) => (
               <Card key={certificate.id || index} className="shadow-lg border-0 bg-white/90 backdrop-blur-sm hover:shadow-xl transition-all duration-300">
