@@ -89,7 +89,7 @@ function App() {
                   <Award className="w-6 h-6 text-white" />
                 </div>
                 <h1 className="text-xl font-bold text-gray-900 montserrat">
-                  Consulta de Constancias
+                  Consulta de Certificados
                 </h1>
               </div>
               <Button
@@ -124,13 +124,13 @@ function App() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <div>
-              <img src='/src/components/img/LOGO.png'></img>
+            <div className="mx-auto w-24 h-24 bg-gradient-to-br from-blue-600 to-green-600 rounded-full flex items-center justify-center mb-8 shadow-2xl">
+              <Award className="w-12 h-12 text-white" />
             </div>
             
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 montserrat">
               Te damos la bienvenida a Milan
-              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">CEI VIRTUAL | UNILATINA</span>
+              <span className="bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">CEI VIRTUAL | UNILATINA</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
@@ -152,7 +152,7 @@ function App() {
                 className="h-14 px-8 border-2 border-green-600 text-green-700 hover:bg-green-50 font-semibold rounded-xl transition-all duration-200 transform hover:scale-105"
               >
                 <Search className="w-5 h-5 mr-2" />
-                Consultar Constancias
+                Consultar Certificados
               </Button>
             </div>
           </motion.div>
@@ -171,7 +171,7 @@ function App() {
               Características Principales
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Todo lo que necesitas para gestionar las constancias académicas.
+              Todo lo que necesitas para gestionar certificados académicos de manera profesional
             </p>
           </motion.div>
 
@@ -190,26 +190,26 @@ function App() {
                     Panel Administrativo
                   </CardTitle>
                   <CardDescription className="text-gray-600">
-                    Acceso seguro con autenticación para administradores
+                    Acceso seguro con autenticación de Supabase para administradores
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2 text-sm text-gray-600">
                     <li className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-600" />
-                      Autenticación segura
+                      Autenticación segura con Supabase
                     </li>
                     <li className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-600" />
-                      Generación de constancias
+                      Generación de certificados
                     </li>
                     <li className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-600" />
-                      Gestión de cursos y diplomados en base de datos
+                      Gestión de cursos en base de datos
                     </li>
                     <li className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-600" />
-                      Historial completo con un avanzado sistema de búsqueda
+                      Historial completo en Supabase
                     </li>
                   </ul>
                 </CardContent>
@@ -230,7 +230,7 @@ function App() {
                     Consulta Pública
                   </CardTitle>
                   <CardDescription className="text-gray-600">
-                    Verificación y descarga de constancia para los estudiantes
+                    Verificación y descarga de certificados desde Supabase
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -270,7 +270,7 @@ function App() {
                     PDFs Profesionales
                   </CardTitle>
                   <CardDescription className="text-gray-600">
-                    Constancia con diseño horizontal y verificación
+                    Certificados con diseño horizontal personalizable y validación
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -289,29 +289,51 @@ function App() {
                     </li>
                     <li className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-600" />
-                      Envío por email
+                      Envío automático por email
                     </li>
                   </ul>
                 </CardContent>
               </Card>
             </motion.div>
           </div>
-          <div className="mt-6 p-4 bg-blue-50 rounded-lg border border-blue-200">
-            <p className="text-xs text-blue-700 text-center">
-              <strong>Todos los derechos reservados - 2025</strong><br />
-              Desarrollado con amor en Medellín/Colombia por <a href='https://wa.me/573208048128'>Lenipseart Developer</a><br/>
-              Para CEI VIRTUAL - UNILATINA
-            </p>
-             <p className="text-xs text-blue-700 text-center mt-2">
-              Conectando educación virtual de calidad
-            </p>
-          </div>
         </div>
       </div>
+
+      <div className="py-20 bg-gradient-to-r from-blue-600 to-green-600">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+          >
+            <h2 className="text-4xl font-bold text-white mb-6 montserrat">
+              ¿Listo para comenzar?
+            </h2>
+            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+              Únete a las instituciones que confían en nuestro sistema para generar certificados académicos profesionales
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button
+                onClick={() => setCurrentView('login')}
+                className="h-14 px-8 bg-white text-blue-600 hover:bg-gray-100 font-semibold rounded-xl transition-all duration-200 transform hover:scale-105 shadow-lg"
+              >
+                <Shield className="w-5 h-5 mr-2" />
+                Comenzar Ahora
+              </Button>
+              <Button
+                onClick={() => setCurrentView('search')}
+                variant="outline"
+                className="h-14 px-8 border-2 border-white text-white hover:bg-white/10 font-semibold rounded-xl transition-all duration-200 transform hover:scale-105"
+              >
+                <Search className="w-5 h-5 mr-2" />
+                Ver Demo
+              </Button>
+            </div>
+          </motion.div>
+        </div>
       </div>
-      
+    </div>
   );
-  
 }
 
 export default App;
